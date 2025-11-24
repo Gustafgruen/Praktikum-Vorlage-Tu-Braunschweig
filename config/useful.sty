@@ -1,0 +1,39 @@
+% Sprache
+\RequirePackage[T1]{fontenc}% Verbessert die Silbentrennung
+\RequirePackage{lmodern}    % Moderne, skalierbare Schriftart
+\RequirePackage[ngerman]{babel}% Passt Sprache an
+
+% Struktur & Layout
+\RequirePackage[a4paper, left=2cm, right=2cm, top=2cm, bottom=2cm]{geometry} % Seitenränder anpassen
+\RequirePackage{appendix}   % Formatierung für Anhänge
+\RequirePackage{tcolorbox}  % Farbige Boxen
+\tcbuselibrary{breakable, skins} % Um Seitenbrüche zu haben
+\RequirePackage{biblatex}   % Um literaturverzeichniss einzufügen
+\RequirePackage{csquotes}   % Literaturverzeichniss anzeigen
+
+% Inhalt & Darstellung
+\RequirePackage{xurl}       % Url formatieren
+\RequirePackage{graphicx}   % Bilder einfügen
+\RequirePackage{float}      % Bessere Bildpositionierung
+\RequirePackage{caption}    % Bildbeschriftung anpassen
+\RequirePackage{amsmath}    % Mathematische Formeln
+\RequirePackage{amsfonts}   % Mathematische Formeln
+\RequirePackage{amssymb}    % Mathematische Formeln
+\RequirePackage{amsthm}     % Mathematische Formeln
+\RequirePackage{tikz}       % Für tiksipicture
+\RequirePackage{pgfplots}   % Diagramme zeichnen
+\RequirePackage[european]{circuitikz} % für Schaltkreise
+\usetikzlibrary{3d}
+\usetikzlibrary{positioning}
+%pgfplots einrichten
+\usepgfplotslibrary{polar}% Polardiagramme zeichnen
+\pgfplotsset{compat=1.18} % Kompatibilität für PGFPlots
+
+% Interaktivität & Links
+\RequirePackage{hyperref}   % Erstellt anklickbare Links
+\RequirePackage{url}        % URLs korrekt umbrechen
+\RequirePackage{color}      % Text einfärben
+\RequirePackage{xcolor}     % Für ddefinierte farben
+
+% Zusatz
+\RequirePackage{lipsum}

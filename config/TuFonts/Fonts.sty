@@ -1,0 +1,15 @@
+\RequirePackage{fontspec}
+
+\setmainfont[
+    Path=config/TuFonts/Nexus/,
+    BoldFont = {NexusSerifPro-Bold.otf},
+    ItalicFont = {NexusSerifPro-Italic.otf},
+    BoldItalicFont = {NexusSerifPro-BoldItalic.otf},
+    SlantedFeatures = {FakeSlant=0.2},
+    SlantedFont = {NexusSerifPro-Regular.otf}
+]{NexusSerifPro-Regular.otf}
+
+% Für Listen
+\renewcommand{\labelitemi}{\rule[0.1em]{0.4em}{0.4em}}%
+\renewcommand{\labelitemii}{\rule[0.1em]{0.3em}{0.3em}}%
+\renewcommand{\labelitemiii}{\rule[0.1em]{0.3em}{0.3em}}%

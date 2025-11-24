@@ -1,0 +1,146 @@
+\RequirePackage{tikz}       % Für tiksipicture
+\RequirePackage{xcolor}     % Für ddefinierte farben
+\RequirePackage{tcolorbox}  % Farbige Boxen
+\tcbuselibrary{breakable, skins} % Um Seitenbrüche zu haben
+\RequirePackage{graphicx}   % Bilder einfügen
+\RequirePackage{geometry} % Seitenränder anpassen
+\newcount\VNummer
+% ---------- Definition der Erste Seite ------------
+\AtBeginDocument{
+%Definiere versuchsfarben
+\ifnum\VNummer > 20
+    % Block 3
+    \definecolor{col1}{RGB}{000,112,155} % Farbe Block 3
+\else
+    \ifnum\VNummer > 10
+        % Block 2
+        \definecolor{col1}{RGB}{000,113,086} % Farbe Block 2
+
+    \else
+        % Block 1
+        \definecolor{col1}{RGB}{190,030,050} % Farbe Block 1
+    \fi
+\fi
+
+% Erstelle literatureintrag für skript
+\ifnum\VNummer > 30
+    \def\VName{Bitte Versuchsnummer eintragen}
+    \nocite{leerequelle}
+\else
+    \ifnum\VNummer < 1
+        \def\VName{Bitte Versuchsnummer eintragen}
+        \nocite{leerequelle}
+    \else
+        \nocite{V\the\VNummer}
+        \def\VName{\csname VName@\the\VNummer\endcsname}
+    \fi
+\fi
+
+% Hier beginnt Das Styling der ersten seite
+\thispagestyle{empty}
+\newgeometry{left=0mm, right=0mm,top=0mm,bottom=0mm}
+
+% Hier beginnt was auf der seite zu sehen ist
+\begin{tikzpicture}[remember picture, overlay, x=1cm, y=1cm, shift={(current page.north west)}]
+    % Hintergrundbox
+    \fill[color=black] (0.75,-3.75) rectangle (20.35,-28.85);
+    \fill[color=col1] (0.8,-3.8) rectangle (20.3,-28.8);
+    \fill[color=black] (0.1,-1.25) rectangle (6.55,-5.65);
+    \fill[color=white] (0.8,-3.8) rectangle (6.55,-5.65);
+    \fill[color=col1] (0.15,-1.3) rectangle (6.5,-5.6);
+    %Linien
+    \fill[color=white] (0.15,-2.7) rectangle (6.5,-2.75);
+    \draw[fill=white, draw=black, line width=0.02cm] (0.79, -6.5) rectangle (20.31,-6.6);
+    \draw[fill=white, draw=black, line width=0.02cm] (0.79,-12.2) rectangle (20.31,-12.3);
+    \draw[fill=white, draw=black, line width=0.02cm] (0.79,-14.6) rectangle (20.31,-14.7);
+    \draw[fill=white, draw=black, line width=0.02cm] (0.79,-19.4) rectangle (20.31,-19.5);
+    \draw[fill=white, draw=black, line width=0.02cm] (0.79,-24.2) rectangle (20.31,-24.3);
+    
+    % Bilder
+    \node at (10.55,-2.14) {\includegraphics[]{config/Logo_IPKM.pdf}};% Nicht auf der ofizielle vorlage
+    \node at (17.25,-2.14) {\includegraphics[width=5cm]{config/Logo_Tu.pdf}}; %Tu Logo
+
+\ifnum\VNummer > 20 % Das Große bild bei unterschidlichen sachen
+    % Block 3
+    \node at (10.55,-9.4) {\includegraphics[width=19.5cm, height=5.58cm]{config/Deckblatt/Grundpraktikum 3.pdf}};
+\else
+    \ifnum\VNummer > 10
+        % Block 2
+         \node at (10.55,-9.4) {\includegraphics[width=19.5cm, height=5.58cm]{config/Deckblatt/Grundpraktikum 2.pdf}}; 
+    \else
+        % Block 1
+        \node at (10.55,-9.4) {\includegraphics[width=19.5cm, height=5.58cm]{config/Deckblatt/Grundpraktikum 1.pdf}};
+    \fi
+\fi
+
+    
+    % Texte
+    % Titel
+\ifnum\VNummer > 20
+    \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Atome, Moleküle, Kerne}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+    \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK III}};
+\else
+    \ifnum\VNummer > 10
+        \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK II}};
+        \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Elektromagnetismus und Optik}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+    \else
+        \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK I}};
+        \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Mechanik und Wärme}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+    \fi
+\fi
+    
+    \node[text=white, font=\fontsize{21.5}{21.5}\selectfont, align=center, text width= 13.75cm] at (13.475,-5.15){\textbf{\VName}}; % Der Titel des Versuches % Das Exestiert nicht in der Ofiziellen version
+\ifnum\VNummer < 10
+    \node[text=white, font=\fontsize{48}{40}\selectfont] at (3.325,-4.175) {\textbf{V0\the\VNummer}};% Versuchsnummer
+\else
+    \node[text=white, font=\fontsize{48}{40}\selectfont] at (3.325,-4.175) {\textbf{V\the\VNummer}};% Versuchsnummer
+\fi
+
+
+    
+    \node[text=white, right, font=\Large] at (0.8,-13.44) {\textbf{Gruppennummer: 204}}; % Hier Gruppennummer
+    \node[text=white, right, font= \Large] at (10.55,-13.44) {\textbf{Versuchsdatum: \VTag .\VMonat .\VJahr}}; % Hier Datum
+    
+\ifdefined\Namea
+    \node[text=white, right, font=\Large] at (0.8,-16.2) {\textbf{Name: \Namea}}; % Name Partner 1
+    \node[text=white, right, font= \Large] at (10.55,-16.2) {\textbf{Matrikelnr.: \Matrikela}}; % Matrikelnummer Partner 1
+    \node[text=white, right, font=\Large] at (0.8,-17.8) {\textbf{Email-Adresse: \Emaila}}; % Email Partner 1
+\else
+    \fill[color=col1!25] (0.8,-14.71) rectangle (20.3,-19.39); % Verschteckt Partner 2
+\fi
+
+\ifdefined\Nameb
+    \node[text=white, right, font=\Large] at (0.8,-21) {\textbf{Name: \Nameb}}; % Name Partner 2
+    \node[text=white, right, font= \Large] at (10.55,-21) {\textbf{Matrikelnr.: \Matrikelb}}; % Matrikelnummer Partner 2
+    \node[text=white, right, font=\Large] at (0.8,-22.6) {\textbf{Email-Adresse: \Emailb}}; % Email Partner 2
+\else
+    \fill[color=col1!25] (0.8,-19.51) rectangle (20.3,-24.19); % Verschteckt Partner 2
+\fi
+
+\ifdefined\Namec
+    \node[text=white, right, font=\Large] at (0.8,-25.8) {\textbf{Name: \Namec}}; % Name Partner 3
+    \node[text=white, right, font= \Large] at (10.55,-25.8) {\textbf{Matrikelnr.: \Matrikelc}}; % Matrikelnummer Partner 3
+    \node[text=white, right, font=\Large] at (0.8,-27.4) {\textbf{Email-Adresse: \Emailc}}; % Email Partner 3
+\else
+    \fill[color=col1!25] (0.8,-24.31) rectangle (20.3,-28.8); % Verschteckt Partner 3
+    \ifdefined\Rickroll
+    \else
+    \node at (10.55,-26.555) {\includegraphics[width=4.49cm]{config/Der_Code.png}};
+    \fi
+\fi
+\end{tikzpicture}
+\restoregeometry
+\newpage
+\begingroup
+\ohead{}
+\ihead{}
+\cfoot{}
+\let\section\oldsection
+\renewcommand{\contentsname}{}
+\begin{tcolorbox}[breakable, colframe=black, colback=col1!20,title=\Large\textbf{Das Inhaltsverzeichnis}, colbacktitle=col1]
+\vspace{-1.5em}
+\tableofcontents
+\end{tcolorbox}
+\newpage
+\endgroup
+    }

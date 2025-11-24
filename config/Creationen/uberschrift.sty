@@ -1,0 +1,145 @@
+\RequirePackage{xparse}     % Zum Definieren der Überschriften
+\RequirePackage{hyperref}   % Für referenzen
+\RequirePackage{tcolorbox}  % Farbige Boxen
+\tcbuselibrary{breakable, skins} % Um Seitenbrüche zu haben
+
+% Wenn ceine farbe definiert wurde :) also zum testen
+%\definecolor{col1}{RGB}{000,113,086} % Farbe Block 2
+
+% Zur erkennung von Absätzen
+\newif\ifWasSection
+\WasSectionfalse % Initialer Zustand
+% Definiere die Absätze zum zurücksetzen der Section
+\let\oldpar\par
+\def\par{%
+    \global\WasSectionfalse % Setzt den Status zurück, sobald der ERSTE Absatz beginnt
+    \oldpar
+}
+
+% --- Neudefinierung der Überschriften ---
+%Definire Alte Überschriften
+\let\oldsection\section
+\let\oldsubsection\subsection
+\let\oldsubsubsection\subsubsection
+
+% Längen um für for und hinter überschrift
+\newlength{\sectiongapa}
+\newlength{\sectiongapb}
+\setlength{\sectiongapa}{1.5em}
+\setlength{\sectiongapb}{.5em}
+
+% Definiert neue Überschrift "section"
+\DeclareDocumentCommand{\section}{s m}{
+    \IfBooleanTF{#1}{% Wen Stern neben der Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapb}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapb}
+            \fi
+        \fi
+        \begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
+            \color{white}\Large\textbf{#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }{% Normale Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapa}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapa}
+            \fi
+        \fi
+        \refstepcounter{section}
+        \phantomsection
+        \addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
+        \begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
+            \color{white}\Large
+            \textbf{\thesection\,#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }
+}
+
+% Definiert neue Überschrift "subsection"
+\DeclareDocumentCommand{\subsection}{s m}{
+    \IfBooleanTF{#1}{% Wen Stern neben der Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapb}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapb}
+            \fi
+        \fi
+        \begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
+            \Large\textbf{#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }{% Normale Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapa}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapa}
+            \fi
+        \fi
+        \refstepcounter{subsection}
+        \phantomsection
+        \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#2}
+        \begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
+            \color{black}\large
+            \textbf{\thesubsection\,#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }
+}
+% Definiert neue Überschrift "subsubsection"
+\DeclareDocumentCommand{\subsubsection}{s m}{
+    \IfBooleanTF{#1}{% Wen Stern neben der Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapb}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapb}
+            \fi
+        \fi
+        \begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
+            \Large\textbf{#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }{% Normale Überschrift
+        \ifhmode % Fall 1: Sektion kommt direkt nach Fließtext
+            \par\vspace{\sectiongapa}
+        \else % Fall 2: Sektion kommt nach Leerzeile oder anderer Sektio
+            \ifWasSection % Fall 1: Koommt nach section
+                \vspace{-\sectiongapb}
+            \else % Fall 2: kommt nach leerzeile
+                \vspace{\sectiongapa}
+            \fi
+        \fi
+        \refstepcounter{subsubsection}
+        \phantomsection
+        \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsubsection}#2}
+        \begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
+            \color{black}\normalsize
+            \textbf{\thesubsubsection\,#2}
+        \end{tcolorbox}
+        \vspace{\sectiongapb}
+        \global\WasSectiontrue
+    }
+}
