@@ -3,7 +3,7 @@
 ### Deckblatt
 der Praktikumsblock Text ist nun bündig mit der Block Box
 ## Hiwibeschwerde 2
-Der Rick Roll muss aktiv von User aktiviert werden (Gerne in die eckigen klammern "Rick" Schreiben :o)
+Der Rick Roll muss aktiv von User aktiviert werden (Gerne in die eckigen klammern „Rick“ Schreiben :o)
 ## Qualiti
 ### Si
 die Einheiten zeigen mit u zeigen nun ein mal und der Abstand ist an der richtigen stelle.

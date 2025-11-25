@@ -7,6 +7,18 @@
 \newcount\VNummer
 % ---------- Definition der Erste Seite ------------
 \AtBeginDocument{
+\ifdefined\VTag
+\else
+    \def\VTag{01}
+\fi
+\ifdefined\VMonat
+\else
+    \def\VMonat{01}
+\fi
+\ifdefined\VJahr
+\else
+    \def\VJahr{1970}
+\fi
 %Definiere versuchsfarben
 \ifnum\VNummer > 20
     % Block 3
@@ -24,12 +36,12 @@
 
 % Erstelle literatureintrag für skript
 \ifnum\VNummer > 30
-    \def\VName{Bitte Versuchsnummer eintragen}
-    \nocite{leerequelle}
+    \def\VName{Bitte Versuchsnummer  zwischen 1 und 30 eintragen}
+    \nocite{zombo}
 \else
     \ifnum\VNummer < 1
-        \def\VName{Bitte Versuchsnummer eintragen}
-        \nocite{leerequelle}
+        \def\VName{Bitte Versuchsnummer mit $\backslash \text{VNummer} = 1$ eintragen}
+        \nocite{zombo}
     \else
         \nocite{V\the\VNummer}
         \def\VName{\csname VName@\the\VNummer\endcsname}
