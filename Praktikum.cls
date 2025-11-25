@@ -25,7 +25,6 @@
 \RequirePackage{config/Deckblatt/ErsteSeite}
 \RequirePackage{config/Creationen/uberschrift}
 \RequirePackage{config/Creationen/SI}
-\addbibresource{config/skript.bib}
 
 % Options
 \DeclareOption{Rick}{
