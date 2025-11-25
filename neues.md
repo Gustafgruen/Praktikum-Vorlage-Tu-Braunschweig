@@ -2,6 +2,8 @@
 ## Fixes
 ### Deckblatt
 der Praktikumsblock Text ist nun bündig mit der Block Box
+###
+Bei Keiner Definition von parametern kommt dennoch ein Protokoll als Ausgabe
 ## Hiwibeschwerde 2
 Der Rick Roll muss aktiv von User aktiviert werden (Gerne in die eckigen klammern „Rick“ Schreiben :o)
 ## Qualiti
