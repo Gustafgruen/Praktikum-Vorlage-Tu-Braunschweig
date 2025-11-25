@@ -77,15 +77,15 @@
     % Texte
     % Titel
 \ifnum\VNummer > 20
-    \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Atome, Moleküle, Kerne}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+    \node[text=col1, font=\large, right] at (6.55,-3.45){\textbf{Atome, Moleküle, Kerne}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
     \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK III}};
 \else
     \ifnum\VNummer > 10
         \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK II}};
-        \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Elektromagnetismus und Optik}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+        \node[text=col1, font=\large, right] at (6.55,-3.45){\textbf{Elektromagnetismus und Optik}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
     \else
         \node[text=white, font=\fontsize{31}{0}\selectfont] at (3.325,-2) {\textbf{BLOCK I}};
-        \node[text=col1, font=\large, align=left] at (10.55,-3.45){\textbf{Mechanik und Wärme}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
+        \node[text=col1, font=\large, right] at (6.55,-3.45){\textbf{Mechanik und Wärme}}; % In der Ofiziellen version steht hier Physikalisches Grundpraktikum
     \fi
 \fi
     
@@ -124,8 +124,9 @@
 \else
     \fill[color=col1!25] (0.8,-24.31) rectangle (20.3,-28.8); % Verschteckt Partner 3
     \ifdefined\Rickroll
-    \else
     \node at (10.55,-26.555) {\includegraphics[width=4.49cm]{config/Der_Code.png}};
+    \else
+    % Überlege ob du wirklich kein Rick Roll haben willst
     \fi
 \fi
 \end{tikzpicture}

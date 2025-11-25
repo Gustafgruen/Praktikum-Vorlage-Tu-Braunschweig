@@ -1,9 +1,9 @@
 # Einrichtung
 Um die Klasse **Praktikum** zu verwenden, muss die Dokumentenklasse **documentclass** in der Versuchsanleitung geladen werden. Zusätzlich wird ein Compiler wie **XeLaTeX** benötigt.
-Mit der Option **pdflatex** in der Klasse kann ein älterer Compiler wie **pdfLaTeX** Verwendet werdeen  
+Mit der Option **pdflatex** in der Klasse kann ein älterer Compiler wie **pdfLaTeX** Verwendet werden  
 
 ## Users
-in Users werden die user wie folgt definiert
+in Users werden die User wie folgt definiert
 %Daten zur Gruppe
 \def\Gruppennummer{000}
 
@@ -22,8 +22,8 @@ in Users werden die user wie folgt definiert
 \def\Matrikelc{1234567}
 \def\Emailc{vorname.nachname@tu-braunschweig.de}
 
-Wobei bei nichtnutzen einer gruppe an user diese user einfach ausgeblendet werden 
-wenn der name von Person c zumbeispiel wegelassen wird so kommt stadt den daten ein graues feld rüber.
+Wobei bei Nichtnutzen einer Gruppe an User diese User einfach ausgeblendet werden 
+wenn der Name von Person c zum Beispiel weggelassen wird, so kommt statt den Daten ein graues Feld rüber.
 
 ---
 

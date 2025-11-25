@@ -12,7 +12,7 @@
 \newcommand{\J}{\ensuremath{\,\text{J}}} % Joule
 \newcommand{\Ju}{\ensuremath{\,\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
 \newcommand{\kJ}{\ensuremath{\,\text{kJ}}} % Joule
-\newcommand{\kJu}{\ensuremath{\,10^3\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
+\newcommand{\kJu}{\ensuremath{\cdot10^3\,\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
 
 \newcommand{\N}{\ensuremath{\,\text{N}}} % Newton
 \newcommand{\Nu}{\ensuremath{\,\frac{\text{kg m}}{\text{s}^2}}} % Newton in SI-Basiseinheiten
@@ -24,7 +24,7 @@
 \newcommand{\Pau}{\ensuremath{\,\frac{\text{kg}}{\text{m s}^2}}} % Pascal in SI-Basiseinheiten (N/m^2)
 
 \newcommand{\barr}{\ensuremath{\,\text{bar}}} % Bar 
-\newcommand{\baru}{\ensuremath{\,10^5 \frac{\text{kg}}{\text{m s}^2}}} % Bar in SI-Basiseinheiten (1 bar = 10^5 Pa)
+\newcommand{\baru}{\ensuremath{\cdot10^5\, \frac{\text{kg}}{\text{m s}^2}}} % Bar in SI-Basiseinheiten (1 bar = 10^5 Pa)
 
 \newcommand{\V}{\ensuremath{\,\text{V}}} % Volt
 \newcommand{\Vu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{A s}^3}}} % Volt in SI-Basiseinheiten (J/C = J/(A s))
@@ -40,24 +40,26 @@
 \newcommand{\C}{\ensuremath{\,^\circ\text{C}}} % Grad Celsius (keine SI-Basiseinheit, aber wichtig)
 \newcommand{\liter}{\ensuremath{\,\text{L}}} % Liter 
 \newcommand{\mL}{\ensuremath{\,\text{ml}}}
-\newcommand{\Lu}{\ensuremath{\,10^{-3}\text{m}^3}} % Liter in SI-Basiseinheiten
+\newcommand{\Lu}{\ensuremath{\cdot10^{-3}\,\text{m}^3}} % Liter in SI-Basiseinheiten
 \newcommand{\g}{\ensuremath{\,\text{g}}}   % Gramm (keine SI-Basiseinheit, aber abgeleitet von kg)
-\newcommand{\gu}{\ensuremath{\,10^{-3}\text{kg}}} % Gramm in SI-Basiseinheiten
+\newcommand{\gu}{\ensuremath{\cdot10^{-3}\,\text{kg}}} % Gramm in SI-Basiseinheiten
 \newcommand{\mg}{\ensuremath{\,\text{mg}}}   % Gramm (keine SI-Basiseinheit, aber abgeleitet von kg)
-\newcommand{\mgu}{\ensuremath{\,10^{-6}\text{kg}}} % Gramm in SI-Basiseinheiten
+\newcommand{\mgu}{\ensuremath{\cdot10^{-6}\,\text{kg}}} % Gramm in SI-Basiseinheiten
 \newcommand{\cm}{\ensuremath{\,\text{cm}}} % Zentimeter
-\newcommand{\cmu}{\ensuremath{\,10^{-2}\text{m}}} % Zentimeter in SI-Basiseinheiten
+\newcommand{\cmu}{\ensuremath{\cdot10^{-2}\,\text{m}}} % Zentimeter in SI-Basiseinheiten
 \newcommand{\mm}{\ensuremath{\,\text{mm}}} % Millimeter
-\newcommand{\mmu}{\ensuremath{\,10^{-3}\text{m}}} % Millimeter in SI-Basiseinheiten
+\newcommand{\mmu}{\ensuremath{\cdot10^{-3}\,\text{m}}} % Millimeter in SI-Basiseinheiten
 \newcommand{\nm}{\ensuremath{\,\text{nm}}} % Nano Meter
-\newcommand{\nmu}{\ensuremath{\,10^{-9}\text{m}}} % Nano in SI-Basiseinheiten
+\newcommand{\nmu}{\ensuremath{\cdot10^{-9\,\text{m}}} % Nano in SI-Basiseinheiten
 
 \newcommand{\ms}{\ensuremath{\,\frac{\text{m}}{\text{s}}}} % Meter pro Sekunde 
 
 \newcommand{\mss}{\ensuremath{\,\frac{\text{m}}{\text{s}^2}}} % Meter pro Sekunde Quadrat (Beschleunigung)
 
-\newcommand{\abl}[2]{\ensuremath{\frac{\text{d}\,#1}{\text{d}\,#2}}}
 
-\newcommand{\°}{\ensuremath{^\circ}}
+% Operationen
+\newcommand{\abl}[2]{\ensuremath{\frac{\text{d}\,#1}{\text{d}\,#2}}} % Ableitung
 
-\newcommand{\e}[1]{\ensuremath{\cdot10^{#1}}}
+\newcommand{\°}{\ensuremath{^\circ}} % ° Symbol
+
+\newcommand{\e}[1]{\ensuremath{\cdot10^{#1}}} % e schreibweise
