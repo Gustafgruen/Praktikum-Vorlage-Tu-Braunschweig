@@ -13,7 +13,7 @@
 %
 % =======================================================================================
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Praktikum}[2025/12/10 Praktikum Tu-Bs]
+\ProvidesClass{Praktikum}[2025/12/12 Praktikum Tu-Bs]
 
 % Lade die Basis-Dokumentenklasse mit den Standardeinstellungen
 \LoadClass[12pt, a4paper, DIV=12, BCOR=1cm]{scrartcl}

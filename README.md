@@ -63,4 +63,4 @@ Mit `\section` kann ein farbiger Abschnitt erstellt werden. Wenn dieses Design n
 ---
 
 # Referenz auf ein Skript
-Um auf das Skript zu verweisen, kann `\hyperref[V11Skript]{Skript}` verwendet werden, wobei **V11** durch die entsprechende Versuchsnummer ersetzt werden muss.
+Um auf das Skript zu verweisen, kann `\cite{V11}` verwendet werden, wobei **V11** durch die entsprechende Versuchsnummer ersetzt werden muss.

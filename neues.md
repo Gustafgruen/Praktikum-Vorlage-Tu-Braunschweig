@@ -1,3 +1,10 @@
+# 25.12.12
+## Optik
+Links sind blau
+
+## Readme
+verweis auf Skript upgedatet  
+
 # 25.12.10
 ## Optik
 Links sind Farbig
