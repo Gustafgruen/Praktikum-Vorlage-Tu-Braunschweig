@@ -1,3 +1,11 @@
+# 25.12.10
+## Optik
+Links sind Farbig
+
+# 25.12.05
+## Qualiti
+Wenn auf überschrift oder seitenzahhl geklickt wird w#irde auf das inhaltsverzeichnis gelinkt
+
 # 25.11.24
 ## Fixes
 ### Deckblatt
