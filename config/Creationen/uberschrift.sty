@@ -25,8 +25,8 @@
 % Längen um für for und hinter überschrift
 \newlength{\sectiongapa}
 \newlength{\sectiongapb}
-\setlength{\sectiongapa}{1.5em}
-\setlength{\sectiongapb}{.5em}
+\setlength{\sectiongapa}{.5em}
+\setlength{\sectiongapb}{1em}
 
 % Definiert neue Überschrift "section"
 \DeclareDocumentCommand{\section}{s m}{
@@ -58,10 +58,10 @@
         \refstepcounter{section}
         \phantomsection
         \addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
-        \begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
             \color{white}\Large
             \textbf{\thesection\,#2}
-        \end{tcolorbox}
+        \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
     }
@@ -97,10 +97,10 @@
         \refstepcounter{subsection}
         \phantomsection
         \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#2}
-        \begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
             \color{black}\large
             \textbf{\thesubsection\,#2}
-        \end{tcolorbox}
+        \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
     }
@@ -135,10 +135,10 @@
         \refstepcounter{subsubsection}
         \phantomsection
         \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsubsection}#2}
-        \begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
             \color{black}\normalsize
             \textbf{\thesubsubsection\,#2}
-        \end{tcolorbox}
+        \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
     }
