@@ -40,8 +40,8 @@
                 \vspace{\sectiongapb}
             \fi
         \fi
-        \begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
-            \color{white}\Large\textbf{#2}
+        \begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt, fontupper=\Large\bfseries\color{white}, halign=left]
+            #2
         \end{tcolorbox}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
@@ -58,9 +58,8 @@
         \refstepcounter{section}
         \phantomsection
         \addcontentsline{toc}{section}{\protect\numberline{\thesection}#2}
-        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt]
-            \color{white}\Large
-            \textbf{\thesection\,#2}
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1, before skip=0pt, after skip=0pt, fontupper=\Large\bfseries\color{white}, halign=left]
+            \thesection\:#2
         \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
@@ -79,8 +78,8 @@
                 \vspace{\sectiongapb}
             \fi
         \fi
-        \begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
-            \Large\textbf{#2}
+        \begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt, fontupper=\large\bfseries\color{black}, halign=left]
+            #2
         \end{tcolorbox}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
@@ -97,9 +96,8 @@
         \refstepcounter{subsection}
         \phantomsection
         \addcontentsline{toc}{subsection}{\protect\numberline{\thesubsection}#2}
-        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt]
-            \color{black}\large
-            \textbf{\thesubsection\,#2}
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!60, before skip=0pt, after skip=0pt, fontupper=\large\bfseries\color{black}, halign=left]
+            \thesubsection\:#2
         \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
@@ -117,8 +115,8 @@
                 \vspace{\sectiongapb}
             \fi
         \fi
-        \begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
-            \Large\textbf{#2}
+        \begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt, fontupper=\normalsize\bfseries\color{black}, halign=left]
+            #2
         \end{tcolorbox}
         \vspace{\sectiongapb}
         \global\WasSectiontrue
@@ -135,9 +133,8 @@
         \refstepcounter{subsubsection}
         \phantomsection
         \addcontentsline{toc}{subsubsection}{\protect\numberline{\thesubsubsection}#2}
-        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt]
-            \color{black}\normalsize
-            \textbf{\thesubsubsection\,#2}
+        \hyperref[Inhaltsverzeichniss]{\begin{tcolorbox}[colframe=white, colback=col1!20, before skip=0pt, after skip=0pt, fontupper=\normalsize\bfseries\color{black}, halign=left]
+            \thesubsubsection\:#2
         \end{tcolorbox}}
         \vspace{\sectiongapb}
         \global\WasSectiontrue

@@ -1,3 +1,10 @@
+# 26.01.07
+## Fixes
+zu Lange Überschriften haben keinen \hbox Error
+
+## Optik
+Überschriften sind nun Linksbündig und haben Platz zwischen Nummer und Text
+
 # 25.12.12
 ## Optik
 Links sind blau
