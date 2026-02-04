@@ -1,3 +1,7 @@
+# 26.02.04
+## Optik
+Tixigraphen haben "," als sepqrator für decimal stellen
+
 # 26.01.07
 ## Fixes
 zu Lange Überschriften haben keinen \hbox Error

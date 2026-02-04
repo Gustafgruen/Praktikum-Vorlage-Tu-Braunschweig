@@ -29,6 +29,7 @@
 %pgfplots einrichten
 \usepgfplotslibrary{polar}% Polardiagramme zeichnen
 \pgfplotsset{compat=1.18} % Kompatibilität für PGFPlots
+\pgfkeys{/pgf/number format/.cd, use comma,1000 sep={.}} % nutze , als decimalseperator
 
 % Interaktivität & Links
 \RequirePackage[pdfborder={0 0 0}, colorlinks, linkcolor=blue]{hyperref}   % Erstellt anklickbare Links
