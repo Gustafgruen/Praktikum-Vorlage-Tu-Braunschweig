@@ -25,7 +25,7 @@
 \RequirePackage{config/Deckblatt/ErsteSeite}
 \RequirePackage{config/Creationen/uberschrift}
 \RequirePackage{config/Creationen/SI}
-
+\RequirePackage{config/Creationen/Zitation}
 % Options
 \DeclareOption{Rick}{
 \def\Rickroll{}
