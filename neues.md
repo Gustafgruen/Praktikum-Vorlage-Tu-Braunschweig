@@ -1,3 +1,7 @@
+# 26.04.27
+## Optik
+Anhang auf deutsch und farbige links richtig
+
 # 26.02.04
 ## Optik
 Tixigraphen haben "," als sepqrator für decimal stellen

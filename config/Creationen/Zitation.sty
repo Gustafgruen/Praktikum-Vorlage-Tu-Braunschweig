@@ -1,9 +1,15 @@
 \RequirePackage{hyperref}   % Für referenzen
+\RequirePackage{etoolbox}   
 \hypersetup{
     colorlinks=true,    % Links farbig statt Rahmen
-    linkcolor=black,     % Farbe interner Links (z.B. Inhaltsverzeichnis)
+    linkcolor=blue,     % Farbe interner Links
     filecolor=black,  % Farbe von Datei-Links
-    urlcolor=black,      % Farbe externer Links (URLs)
-    citecolor=black,    % Farbe von Zitaten
+    urlcolor=red,      % Farbe externer Links
+    citecolor=blue,    % Farbe von Zitaten
 }
 
+% Um das inhaltsverzeichniss schwarze links zu machen
+\makeatletter
+\pretocmd{\tableofcontents}{\hypersetup{linkcolor=black}}{}{}
+\apptocmd{\tableofcontents}{\hypersetup{linkcolor=blue}}{}{}
+\makeatother

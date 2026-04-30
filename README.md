@@ -34,7 +34,7 @@ Der Konfigurationsordner enthält die Dateien, die zur Erstellung der Klasse erf
 Dieser Ordner enthält benutzerdefinierte `.sty`-Dateien (Stil-Dateien).
 * **ueberschrift**: Definiert die Überschriften.
 * **SI**: Definiert Einheiten zur einfacheren Notation.
-
+* **Zitation**: Defiinirt die Farben für die Links
 ## Deckblatt
 Dieser Ordner enthält alle Dateien für das Deckblatt.
 
