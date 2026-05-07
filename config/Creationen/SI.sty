@@ -1,64 +1,166 @@
 % ------- SI Einheiten -------------------
 % Basiseinheiten
-\newcommand{\kg}{\ensuremath{\,\text{kg}}} % Kilogramm
-\newcommand{\m}{\ensuremath{\,\text{m}}}   % Meter
 \newcommand{\s}{\ensuremath{\,\text{s}}}   % Sekunde
-\newcommand{\A}{\ensuremath{\,\text{A}}}   % Ampere
 \newcommand{\K}{\ensuremath{\,\text{K}}}   % Kelvin
 \newcommand{\mol}{\ensuremath{\,\text{mol}}} % Mol
 \newcommand{\cd}{\ensuremath{\,\text{cd}}} % Candela
 
-% Häufig genutzte einheiten
-\newcommand{\J}{\ensuremath{\,\text{J}}} % Joule
-\newcommand{\Ju}{\ensuremath{\,\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
-\newcommand{\kJ}{\ensuremath{\,\text{kJ}}} % Joule
-\newcommand{\kJu}{\ensuremath{\cdot10^3\,\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
-
-\newcommand{\N}{\ensuremath{\,\text{N}}} % Newton
-\newcommand{\Nu}{\ensuremath{\,\frac{\text{kg m}}{\text{s}^2}}} % Newton in SI-Basiseinheiten
-
-\newcommand{\W}{\ensuremath{\,\text{W}}} % Watt
-\newcommand{\Wu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{s}^3}}} % Watt in SI-Basiseinheiten (J/s)
-
-\newcommand{\Pa}{\ensuremath{\,\text{Pa}}} % Pascal
-\newcommand{\Pau}{\ensuremath{\,\frac{\text{kg}}{\text{m s}^2}}} % Pascal in SI-Basiseinheiten (N/m^2)
-
-\newcommand{\barr}{\ensuremath{\,\text{bar}}} % Bar 
-\newcommand{\baru}{\ensuremath{\cdot10^5\, \frac{\text{kg}}{\text{m s}^2}}} % Bar in SI-Basiseinheiten (1 bar = 10^5 Pa)
-
-\newcommand{\V}{\ensuremath{\,\text{V}}} % Volt
-\newcommand{\Vu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{A s}^3}}} % Volt in SI-Basiseinheiten (J/C = J/(A s))
-\newcommand{\mV}{\ensuremath{\,\text{mV}}}
-
-\newcommand{\Ohm}{\ensuremath{\,\Omega}} % Ohm
-\newcommand{\Ohmu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{A}^2 \text{s}^3}}} % Ohm in SI-Basiseinheiten (V/A)
-
-\newcommand{\Hz}{\ensuremath{\,\text{Hz}}} % Hertz
-\newcommand{\Hzu}{\ensuremath{\,\frac{1}{\text{s}}}} % Hertz in SI-Basiseinheiten (1/s)
-
-
-\newcommand{\C}{\ensuremath{\,^\circ\text{C}}} % Grad Celsius (keine SI-Basiseinheit, aber wichtig)
-\newcommand{\liter}{\ensuremath{\,\text{L}}} % Liter 
-\newcommand{\mL}{\ensuremath{\,\text{ml}}}
-\newcommand{\Lu}{\ensuremath{\cdot10^{-3}\,\text{m}^3}} % Liter in SI-Basiseinheiten
-\newcommand{\g}{\ensuremath{\,\text{g}}}   % Gramm (keine SI-Basiseinheit, aber abgeleitet von kg)
+% --- Kilogramm [kg] ---
+\newcommand{\Mg}{\ensuremath{\,\text{Mg}}} % Megagramm (Tonne)
+\newcommand{\Mgu}{\ensuremath{\cdot10^3\,\text{kg}}} % Megagramm in SI-Basiseinheiten (10^6 g)
+\newcommand{\kg}{\ensuremath{\,\text{kg}}} % Kilogramm
+\newcommand{\g}{\ensuremath{\,\text{g}}} % Gramm
 \newcommand{\gu}{\ensuremath{\cdot10^{-3}\,\text{kg}}} % Gramm in SI-Basiseinheiten
-\newcommand{\mg}{\ensuremath{\,\text{mg}}}   % Gramm (keine SI-Basiseinheit, aber abgeleitet von kg)
-\newcommand{\mgu}{\ensuremath{\cdot10^{-6}\,\text{kg}}} % Gramm in SI-Basiseinheiten
+\newcommand{\mg}{\ensuremath{\,\text{mg}}} % Milligramm
+\newcommand{\mgu}{\ensuremath{\cdot10^{-6}\,\text{kg}}} % Milligramm in SI-Basiseinheiten
+\newcommand{\mug}{\ensuremath{\,\mu\text{g}}} % Mikrogramm
+\newcommand{\mugu}{\ensuremath{\cdot10^{-9}\,\text{kg}}} % Mikrogramm in SI-Basiseinheiten
+
+% --- Meter [m] ---
+\newcommand{\Mm}{\ensuremath{\,\text{Mm}}} % Megameter
+\newcommand{\Mmu}{\ensuremath{\cdot10^6\,\text{m}}} % Megameter in SI-Basiseinheiten
+\newcommand{\km}{\ensuremath{\,\text{km}}} % Kilometer
+\newcommand{\kmu}{\ensuremath{\cdot10^3\,\text{m}}} % Kilometer in SI-Basiseinheiten
+\newcommand{\m}{\ensuremath{\,\text{m}}}   % Meter
 \newcommand{\cm}{\ensuremath{\,\text{cm}}} % Zentimeter
 \newcommand{\cmu}{\ensuremath{\cdot10^{-2}\,\text{m}}} % Zentimeter in SI-Basiseinheiten
 \newcommand{\mm}{\ensuremath{\,\text{mm}}} % Millimeter
 \newcommand{\mmu}{\ensuremath{\cdot10^{-3}\,\text{m}}} % Millimeter in SI-Basiseinheiten
+\newcommand{\mum}{\ensuremath{\,\mu\text{m}}} % Mikrometer
+\newcommand{\mumu}{\ensuremath{\cdot10^{-6}\,\text{m}}} % Mikrometer in SI-Basiseinheiten
 \newcommand{\nm}{\ensuremath{\,\text{nm}}} % Nano Meter
 \newcommand{\nmu}{\ensuremath{\cdot10^{-9}\,\text{m}}} % Nano in SI-Basiseinheiten
-\newcommand{\mA}{\ensuremath{\,\text{mA}}} % MilliAmper
-\newcommand{\mAu}{\ensuremath{\cdot10^{-3}\,\text{A}}} % MilliAmper in SI-Basiseinheiten
-\newcommand{\ms}{\ensuremath{\,\frac{\text{m}}{\text{s}}}} % Meter pro Sekunde 
 
+% --- Ampere [A] ---
+\newcommand{\MA}{\ensuremath{\,\text{MA}}} % Megaampere
+\newcommand{\MAu}{\ensuremath{\cdot10^6\,\text{A}}} % Megaampere in SI-Basiseinheiten
+\newcommand{\kA}{\ensuremath{\,\text{kA}}} % Kiloampere
+\newcommand{\kAu}{\ensuremath{\cdot10^3\,\text{A}}} % Kiloampere in SI-Basiseinheiten
+\newcommand{\A}{\ensuremath{\,\text{A}}}   % Ampere
+\newcommand{\mA}{\ensuremath{\,\text{mA}}} % Milliampere
+\newcommand{\mAu}{\ensuremath{\cdot10^{-3}\,\text{A}}} % Milliampere in SI-Basiseinheiten
+\newcommand{\muA}{\ensuremath{\,\mu\text{A}}} % Mikroampere
+\newcommand{\muAu}{\ensuremath{\cdot10^{-6}\,\text{A}}} % Mikroampere in SI-Basiseinheiten
+
+
+% ------ Anderes Einheiten mit Vorfaktoren ------
+
+% --- Volt [V] ---
+\newcommand{\MV}{\ensuremath{\,\text{MV}}} % Megavolt
+\newcommand{\MVu}{\ensuremath{\cdot10^6\,\text{V}}} % Megavolt in SI-Basiseinheiten
+\newcommand{\kV}{\ensuremath{\,\text{kV}}} % Kilovolt
+\newcommand{\kVu}{\ensuremath{\cdot10^3\,\text{V}}} % Kilovolt in SI-Basiseinheiten
+\newcommand{\V}{\ensuremath{\,\text{V}}} % Volt
+\newcommand{\Vu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{A s}^3}}} % Volt in SI-Basiseinheiten (J/C = J/(A s))
+\newcommand{\mV}{\ensuremath{\,\text{mV}}} % Millivolt
+\newcommand{\mVu}{\ensuremath{\cdot10^{-3}\,\text{V}}} % Millivolt in SI-Basiseinheiten
+\newcommand{\muV}{\ensuremath{\,\mu\text{V}}} % Mikrovolt
+\newcommand{\muVu}{\ensuremath{\cdot10^{-6}\,\text{V}}} % Mikrovolt in SI-Basiseinheiten
+
+% --- Joule [J] ---
+\newcommand{\MJ}{\ensuremath{\,\text{MJ}}} % Megajoule
+\newcommand{\MJu}{\ensuremath{\cdot10^6\,\text{J}}} % Megajoule in SI-Basiseinheiten
+\newcommand{\kJ}{\ensuremath{\,\text{kJ}}} % Kilojoule
+\newcommand{\kJu}{\ensuremath{\cdot10^3\,\text{J}}} % Kilojoule in SI-Basiseinheiten
+\newcommand{\J}{\ensuremath{\,\text{J}}} % Joule
+\newcommand{\Ju}{\ensuremath{\,\frac{\text{kg m}^2}{\text{s}^2}}} % Joule in SI-Basiseinheiten
+\newcommand{\mJ}{\ensuremath{\,\text{mJ}}} % Millijoule
+\newcommand{\mJu}{\ensuremath{\cdot10^{-3}\,\text{J}}} % Millijoule in SI-Basiseinheiten
+\newcommand{\muJ}{\ensuremath{\,\mu\text{J}}} % Mikrojoule
+\newcommand{\muJu}{\ensuremath{\cdot10^{-6}\,\text{J}}} % Mikrojoule in SI-Basiseinheiten
+
+% --- Watt [W] ---
+\newcommand{\MW}{\ensuremath{\,\text{MW}}} % Megawatt
+\newcommand{\MWu}{\ensuremath{\cdot10^6\,\text{W}}} % Megawatt in SI-Basiseinheiten
+\newcommand{\kW}{\ensuremath{\,\text{kW}}} % Kilowatt
+\newcommand{\kWu}{\ensuremath{\cdot10^3\,\text{W}}} % Kilowatt in SI-Basiseinheiten
+\newcommand{\W}{\ensuremath{\,\text{W}}} % Watt
+\newcommand{\Wu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{s}^3}}} % Watt in SI-Basiseinheiten (J/s)
+\newcommand{\mW}{\ensuremath{\,\text{mW}}} % Milliwatt
+\newcommand{\mWu}{\ensuremath{\cdot10^{-3}\,\text{W}}} % Milliwatt in SI-Basiseinheiten
+\newcommand{\muW}{\ensuremath{\,\mu\text{W}}} % Mikrowatt
+\newcommand{\muWu}{\ensuremath{\cdot10^{-6}\,\text{W}}} % Mikrowatt in SI-Basiseinheiten
+
+% --- Pascal [Pa] ---
+\newcommand{\MPa}{\ensuremath{\,\text{MPa}}} % Megapascal
+\newcommand{\MPau}{\ensuremath{\cdot10^6\,\text{Pa}}} % Megapascal in SI-Basiseinheiten
+\newcommand{\kPa}{\ensuremath{\,\text{kPa}}} % Kilopascal
+\newcommand{\kPau}{\ensuremath{\cdot10^3\,\text{Pa}}} % Kilopascal in SI-Basiseinheiten
+\newcommand{\Pa}{\ensuremath{\,\text{Pa}}} % Pascal
+\newcommand{\Pau}{\ensuremath{\,\frac{\text{kg}}{\text{m s}^2}}} % Pascal in SI-Basiseinheiten (N/m^2)
+\newcommand{\mPa}{\ensuremath{\,\text{mPa}}} % Millipascal
+\newcommand{\mPau}{\ensuremath{\cdot10^{-3}\,\text{Pa}}} % Millipascal in SI-Basiseinheiten
+\newcommand{\muPa}{\ensuremath{\,\mu\text{Pa}}} % Mikropascal
+\newcommand{\muPau}{\ensuremath{\cdot10^{-6}\,\text{Pa}}} % Mikropascal in SI-Basiseinheiten
+
+% --- Hertz [Hz] ---
+\newcommand{\MHz}{\ensuremath{\,\text{MHz}}} % Megahertz
+\newcommand{\MHzu}{\ensuremath{\cdot10^6\,\text{Hz}}} % Megahertz in SI-Basiseinheiten
+\newcommand{\kHz}{\ensuremath{\,\text{kHz}}} % Kilohertz
+\newcommand{\kHzu}{\ensuremath{\cdot10^3\,\text{Hz}}} % Kilohertz in SI-Basiseinheiten
+\newcommand{\Hz}{\ensuremath{\,\text{Hz}}} % Hertz
+\newcommand{\Hzu}{\ensuremath{\,\frac{1}{\text{s}}}} % Hertz in SI-Basiseinheiten (1/s)
+\newcommand{\mHz}{\ensuremath{\,\text{mHz}}} % Millihertz
+\newcommand{\mHzu}{\ensuremath{\cdot10^{-3}\,\text{Hz}}} % Millihertz in SI-Basiseinheiten
+
+% --- Farad [F] ---
+\newcommand{\F}{\,\text{F}} % Farat
+\newcommand{\Fu}{\,\frac{\text{A}\cdot\text{s}}{\text{V}}} % Farat
+\newcommand{\mF}{\ensuremath{\,\text{mF}}} % Millifarad
+\newcommand{\mFu}{\ensuremath{\cdot10^{-3}\,\text{F}}} % Millifarad in SI-Basiseinheiten
+\newcommand{\muF}{\ensuremath{\,\mu\text{F}}} % Mikrofarad
+\newcommand{\muFu}{\ensuremath{\cdot10^{-6}\,\text{F}}} % Mikrofarad in SI-Basiseinheiten
+\newcommand{\pF}{\,\text{pF}} % PikoFarat
+\newcommand{\pFu}{\cdot10^{-12}\,\text{F}} % PikoFarat
+
+% --- Newton [N] ---
+\newcommand{\MN}{\ensuremath{\,\text{MN}}} % Meganewton
+\newcommand{\MNu}{\ensuremath{\cdot10^6\,\Nu}} % Meganewton in SI-Basiseinheiten
+\newcommand{\kN}{\ensuremath{\,\text{kN}}} % Kilonewton
+\newcommand{\kNu}{\ensuremath{\cdot10^3\,\Nu}} % Kilonewton in SI-Basiseinheiten
+\newcommand{\N}{\ensuremath{\,\text{N}}} % Newton
+\newcommand{\Nu}{\ensuremath{\,\frac{\text{kg m}}{\text{s}^2}}} % Newton in SI-Basiseinheiten
+\newcommand{\mN}{\ensuremath{\,\text{mN}}} % Millinewton
+\newcommand{\mNu}{\ensuremath{\cdot10^{-3}\,\Nu}} % Millinewton in SI-Basiseinheiten
+\newcommand{\muN}{\ensuremath{\,\mu\text{N}}} % Mikronewton
+\newcommand{\muNu}{\ensuremath{\cdot10^{-6}\,\Nu}} % Mikronewton in SI-Basiseinheiten
+
+% -- Barr [bar] ---
+\newcommand{\Mbar}{\ensuremath{\,\text{Mbar}}} % Megabar
+\newcommand{\Mbaru}{\ensuremath{\cdot10^6\cdot10^5\,\Pau}} % Megabar in SI-Basiseinheiten
+\newcommand{\kbar}{\ensuremath{\,\text{kbar}}} % Kilobar
+\newcommand{\kbaru}{\ensuremath{\cdot10^3\cdot10^5\,\Pau}} % Kilobar in SI-Basiseinheiten
+\newcommand{\barr}{\ensuremath{\,\text{bar}}} % Bar 
+\newcommand{\baru}{\ensuremath{\cdot10^5\, \frac{\text{kg}}{\text{m s}^2}}} % Bar in SI-Basiseinheiten (1 bar = 10^5 Pa)
+\newcommand{\mbar}{\ensuremath{\,\text{mbar}}} % Millibar
+\newcommand{\mbaru}{\ensuremath{\cdot10^{-3}\cdot10^5\,\Pau}} % Millibar in SI-Basiseinheiten
+
+% --- Ohm [\Omega] ---
+\newcommand{\MOhm}{\ensuremath{\,\text{M}\Omega}} % Megaohm
+\newcommand{\MOhmu}{\ensuremath{\cdot10^6\,\Ohmu}} % Megaohm in SI-Basiseinheiten
+\newcommand{\kOhm}{\ensuremath{\,\text{k}\Omega}} % Kiloohm
+\newcommand{\kOhmu}{\ensuremath{\cdot10^3\,\Ohmu}} % Kiloohm in SI-Basiseinheiten
+\newcommand{\mOhm}{\ensuremath{\,\text{m}\Omega}} % Milliohm
+\newcommand{\Ohm}{\ensuremath{\,\Omega}} % Ohm
+\newcommand{\Ohmu}{\ensuremath{\,\frac{\text{kg m}^2}{\text{A}^2 \text{s}^3}}} % Ohm in SI-Basiseinheiten (V/A)
+\newcommand{\mOhmu}{\ensuremath{\cdot10^{-3}\,\Ohmu}} % Milliohm in SI-Basiseinheiten
+\newcommand{\muOhm}{\ensuremath{\,\mu\Omega}} % Mikroohm
+\newcommand{\muOhmu}{\ensuremath{\cdot10^{-6}\,\Ohmu}} % Mikroohm in SI-Basiseinheiten
+
+
+% ------ Andere Einheiten ------
+\newcommand{\C}{\ensuremath{\,^\circ\text{C}}} % Grad Celsius
+\newcommand{\Cu}{\ensuremath{\,\text{K}+273,15\,\text{K}}} % Grad Celsius in Kelvin
+
+\newcommand{\liter}{\ensuremath{\,\text{L}}} % Liter 
+\newcommand{\mL}{\ensuremath{\,\text{ml}}}
+\newcommand{\Lu}{\ensuremath{\cdot10^{-3}\,\text{m}^3}} % Liter in SI-Basiseinheiten
+
+
+\newcommand{\ms}{\ensuremath{\,\frac{\text{m}}{\text{s}}}} % Meter pro Sekunde 
 \newcommand{\mss}{\ensuremath{\,\frac{\text{m}}{\text{s}^2}}} % Meter pro Sekunde Quadrat (Beschleunigung)
 
-
-% Operationen
+% ------ Operationen ------
 \newcommand{\abl}[2]{\ensuremath{\frac{\text{d}\,#1}{\text{d}\,#2}}} % Ableitung
 
 \newcommand{\°}{\ensuremath{^\circ}} % ° Symbol
